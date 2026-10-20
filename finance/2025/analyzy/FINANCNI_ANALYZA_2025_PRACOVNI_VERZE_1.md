@@ -1,13 +1,15 @@
 # Finanční analýza města Lomnice nad Popelkou – rok 2025
-**Pracovní verze 1 · stav zpracování 20. 10. 2026**
+**Pracovní verze 2 · kontrolní aktualizace 20. 10. 2026**
+
+> Tento dokument je pracovní analytický materiál, nikoli zákonný audit. Hlavní souhrnné údaje byly překontrolovány proti FIN 2-12 M a závěrečnému účtu. Návaznost některých rozpočtových opatření zůstává nevyřešená a vyžaduje potvrzení z účetního systému.
 
 ## 1. Shrnutí
 
-Rok 2025 skončil podle výkazu FIN 2-12 M po konsolidaci rozpočtovým schodkem **2 829 379,05 Kč**. Upravený rozpočet počítal se schodkem **45 807 000 Kč**, takže výsledek byl proti upravenému plánu lepší přibližně o **42,98 mil. Kč**. Samotný rozdíl proti plánu ale nelze automaticky označit za úsporu: může souviset s načasováním investic, nedočerpáním, přesuny mezi roky nebo změnou financování.
+Rok 2025 skončil podle výkazu FIN 2-12 M po konsolidaci rozpočtovým schodkem **2 829 379,05 Kč**. Upravený rozpočet po konsolidaci počítal se schodkem **45 807 000 Kč**. Skutečné saldo tedy bylo oproti upravenému plánu lepší o **42 977 620,95 Kč**. Tento rozdíl nelze automaticky označit za úsporu: může souviset s načasováním investic, nedočerpáním, přesuny mezi roky nebo změnou financování.
 
-Krajský úřad ve zprávě o přezkoumání hospodaření za rok 2025 uvedl, že nebyly zjištěny chyby a nedostatky ani rizika s negativním dopadem do budoucna. To je důležitý výsledek zákonného přezkoumání. Neznamená to však, že přezkum detailně vyhodnotil ekonomickou efektivitu každé investice nebo její budoucí provozní náklady.
+Zpráva o přezkoumání hospodaření za rok 2025 uvádí, že nebyly zjištěny chyby a nedostatky ani rizika s negativním dopadem do budoucna. Tento závěr je důležitý, ale nenahrazuje samostatné hodnocení ekonomické efektivity jednotlivých investic a jejich budoucích provozních nákladů.
 
-### Klíčové údaje z FIN 2-12 M
+### Základní údaje z FIN 2-12 M
 
 | Ukazatel | Schválený rozpočet | Rozpočet po změnách | Skutečnost |
 |---|---:|---:|---:|
@@ -19,76 +21,77 @@ Krajský úřad ve zprávě o přezkoumání hospodaření za rok 2025 uvedl, ž
 | **Výdaje po konsolidaci** | **188,619 mil. Kč** | **224,922 mil. Kč** | **190,475 mil. Kč** |
 | **Saldo po konsolidaci** | **−25,807 mil. Kč** | **−45,807 mil. Kč** | **−2,829 mil. Kč** |
 
-Hrubé příjmy a výdaje jsou v roce 2025 výrazně ovlivněny konsolidací ve výši 223,921 mil. Kč. Pro hodnocení rozpočtu města jako celku je proto vhodné pracovat zejména s údaji po konsolidaci a nezaměňovat je s hrubými součty.
+Částky v tabulce jsou zaokrouhleny na tisíce či tři desetinná místa v milionech Kč; pro přesné saldo je použita hodnota z FIN 2-12 M. Hrubé příjmy a výdaje roku 2025 jsou silně ovlivněny konsolidací ve výši 223,921 mil. Kč. Pro hodnocení rozpočtu města jako celku je proto vhodné pracovat hlavně s údaji po konsolidaci a vždy uvést, jaký agregát se používá.
 
-## 2. Rozpočet a rozpočtová opatření
+## 2. Rozpočtová opatření – kontrolní stav
 
-V podkladech je návrh rozpočtu, verze se závaznými ukazateli, schválený rozpočet, kopie určená pro úřední desku a rozpočtová opatření č. 1–10. Rozpočtová opatření pokrývají celý rok; č. 3 je pojmenováno „Rozpočtové opatření číslo tři“.
+Rozpočtová opatření č. 1–10 byla dodána. Jejich souhrnné údaje ale nejsou ve všech případech aritmeticky a chronologicky konzistentní. Podrobná rekonstrukce je uvedena v [kontrolní zprávě návaznosti RO 2025](KONTROLA_NAVAZNOSTI_RO_2025.md).
 
-Konečný upravený rozpočet podle FIN 2-12 M činil:
-- příjmy po konsolidaci 179,115 mil. Kč,
-- výdaje po konsolidaci 224,922 mil. Kč,
-- plánované saldo −45,807 mil. Kč.
+Nejdůležitější nesoulady:
+- **RO č. 2:** souhrn příjmů uvádí předchozí rozpočet 163,282 mil. Kč, změnu +27,740 mil. Kč a nový rozpočet 190,862 mil. Kč; tato čísla si aritmeticky neodpovídají a nenavazují na RO č. 1 ani na další RO č. 3. RO č. 2 současně uvádí výdajový souhrn 189,514 + 27,740 = 217,254 mil. Kč, který naopak navazuje na RO č. 3.
+- **RO č. 3:** příjmový souhrn uvádí 171,447 + 2,812 = 174,214 mil. Kč, což aritmeticky nesedí. RO č. 4 však jako předchozí upravený rozpočet uvádí 174,259 mil. Kč, tedy hodnotu odpovídající součtu 171,447 + 2,812.
+- **RO č. 7 a 8:** souhrn výdajů uvádí základ 255,413 mil. Kč, který neodpovídá návaznosti z RO č. 6 ani souhrnným změnám. Rekonstrukce vede k 224,343 mil. Kč po RO č. 7 a 224,724 mil. Kč po RO č. 8. RO č. 9 následně začíná na 224,724 mil. Kč.
+- **RO č. 9:** v nadpisu tabulky je uvedeno „RO č. 8“, ačkoli dokument sám uvádí RO č. 9 a usnesení 346/25/R.
 
-Skutečnost se od upraveného plánu lišila především na výdajové straně: skutečné výdaje po konsolidaci činily 190,475 mil. Kč, tedy přibližně 84,68 % upraveného rozpočtu. Je třeba projít RO 1–10 a určit, které změny souvisely s investicemi, dotacemi, běžným provozem a přesunem mezi položkami. Bez této rekonstrukce nelze určit, zda nižší čerpání znamená úsporu, odklad, zrušení záměru, nebo jen jiné časování plateb.
+Tyto body jsou **nesoulady ve zveřejněných dokumentech**, nikoli důkaz neoprávněného výdaje. Je potřeba porovnat je s oficiálním exportem upraveného rozpočtu z účetního systému. V RO souhrnech se navíc uvádí částky v tisících Kč, zatímco FIN 2-12 M pracuje s přesnými částkami v Kč; drobné rozdíly v zaokrouhlení je třeba odlišit od skutečné chyby.
 
-## 3. Účetní výsledek není rozpočtové saldo
+## 3. Rozpočtové plnění a nedočerpání
 
-Závěrečný účet uvádí výsledek hospodaření hlavní činnosti podle účetních výkazů. Účetní náklady a výnosy nejsou totéž jako rozpočtové příjmy a výdaje: účetní výsledek obsahuje například odpisy, změny ocenění a další nepeněžní položky. Proto se účetní zisk nesmí prezentovat jako hotovostní přebytek.
+Skutečné výdaje po konsolidaci činily 190,475 mil. Kč, tedy přibližně **84,68 %** upraveného rozpočtu po konsolidaci 224,922 mil. Kč. Rozdíl je přibližně 34,447 mil. Kč. Bez detailu jednotlivých projektů nelze určit, jaká část představuje úsporu, odložené platby, zrušené akce, nevyčerpané dotace nebo časový posun do dalšího roku.
 
-Pro finální analýzu se hodnoty účetního výsledku převezmou přímo z výkazu zisku a ztráty a zkontrolují se proti závěrečnému účtu. Rozpočtové saldo bude vycházet z FIN 2-12 M. Bankovní zůstatky se budou uvádět samostatně.
+Závěrečný účet uvádí upravené běžné výdaje 142,656 mil. Kč a jejich skutečné čerpání 129,903 mil. Kč; upravené kapitálové výdaje 82,736 mil. Kč a jejich čerpání 61,010 mil. Kč. Tyto hodnoty je třeba prezentovat v kontextu výdajových tříd závěrečného účtu, ne zaměňovat s konsolidovaným souhrnem FIN bez vysvětlení metodiky.
 
-## 4. Dluh a úvěrová kapacita
+## 4. Účetní výsledek není rozpočtové saldo
 
-Závěrečný účet uvádí k 31. 12. 2025 nesplacenou jistinu úvěrů **17 009 992 Kč**. Vedle ní je uveden další dlouhodobý závazek ve výši 129 163,08 Kč; po jeho započtení je v závěrečném účtu vykázán dluh 17 139 155,08 Kč a podíl dluhu k průměru příjmů 9,40 %.
+Výkaz zisku a ztráty vykazuje:
+- náklady celkem **157,646 mil. Kč**,
+- výnosy celkem **181,617 mil. Kč**,
+- výsledek hospodaření běžného účetního období **23,972 mil. Kč**.
 
-Tabulka úvěrů dále uvádí nový úvěrový rámec až **60 mil. Kč** na spolufinancování investičních projektů, k 31. 12. 2025 s nulovým čerpáním. Před případným čerpáním je vhodné požadovat:
-- seznam projektů, které má úvěr financovat, a jejich schválené rozpočty,
-- víceletý plán splátek a úroků včetně citlivosti na změnu sazeb,
-- odhad provozních nákladů nových zařízení,
-- plán, jak se budou projekty a dluh promítat do rozpočtů v následujících letech.
+Jde o účetní výsledek, nikoli o rozpočtové saldo ani o hotovostní přebytek. Účetní náklady a výnosy se liší od rozpočtových příjmů a výdajů mimo jiné kvůli odpisům, transferům, časovému rozlišení a dalším nepeněžním či účetním operacím.
 
-Schválený úvěrový rámec není totéž jako skutečně načerpaný dluh.
+## 5. Dluh a úvěrová kapacita
 
-## 5. Majetek a rozpracované investice
+Závěrečný účet uvádí k 31. 12. 2025 nesplacenou jistinu úvěrů **17 009 992 Kč**. V tabulce celkového úvěrového zatížení je uveden také nový úvěrový rámec do **60 mil. Kč** na investiční projekty, který měl k 31. 12. 2025 nulové čerpání. Podíl dluhu k průměru příjmů je podle závěrečného účtu **9,40 %**.
 
-Závěrečný účet uvádí nedokončený dlouhodobý hmotný majetek:
-- 31. 12. 2024: **49,087 mil. Kč**,
-- 31. 12. 2025: **64,923 mil. Kč**,
-- meziroční nárůst: přibližně **15,835 mil. Kč**.
+Před případným čerpáním nového úvěru je vhodné zveřejnit:
+- seznam projektů a jejich schválené rozpočty,
+- harmonogram čerpání, splátek a úroků včetně citlivosti na sazby,
+- odhad budoucích provozních nákladů,
+- dopad projektů a splátek na rozpočty dalších let.
 
-To samo o sobě není důkazem problému: nedokončený majetek může odpovídat legitimním víceletým stavbám. Je to však významná oblast pro věcnou kontrolu. Doporučuje se sestavit projektový seznam s názvem investice, zahájením, dosavadními náklady, dodavateli, dodatky, dotací, plánovaným dokončením a okamžikem převedení do užívání. U dlouhodobě rozpracovaných projektů je třeba vysvětlit další postup a očekávané provozní náklady.
+Schválený úvěrový rámec není totéž co načerpaný dluh.
 
-## 6. Hotovost a likvidita
+## 6. Nedokončený majetek a investice
 
-Závěrečný účet uvádí zůstatky na bankovních účtech celkem **43 079 087,13 Kč**. Rozvaha současně vykazuje finanční majetek v jiné účetní hodnotě. Tyto ukazatele nelze bez dalšího zaměňovat: některé prostředky mohou být vázané na dotace, fondy, projekty či závazky.
+Rozvaha vykazuje nedokončený dlouhodobý hmotný majetek:
+- k 31. 12. 2024: **49 087 293,99 Kč**,
+- k 31. 12. 2025: **64 922 553,98 Kč**,
+- meziroční nárůst: **15 835 259,99 Kč**.
 
-Pro posouzení skutečně volné hotovosti je potřeba sestavit přehled bankovních účtů a termínovaných vkladů, účelového určení prostředků, krátkodobých závazků, plánovaných plateb a minimální provozní rezervy.
+Samotný nárůst není důkazem problému; může odpovídat legitimním víceletým stavbám. Jde však o významnou oblast pro věcnou kontrolu. Je potřeba sestavit seznam konkrétních projektů, dosavadních nákladů, dodavatelů, dodatků, dotací, termínů dokončení, důvodů případných prodlev a data převedení majetku do užívání. U každé akce je třeba navázat rozpočet, smlouvy, dodatky, faktury a skutečné platby.
 
-## 7. Výsledek zákonného přezkoumání
+## 7. Hotovost a likvidita
 
-Zpráva Krajského úřadu Libereckého kraje k přezkoumání hospodaření za období 1. 1.–31. 12. 2025 uvádí:
-- nebyly zjištěny chyby a nedostatky,
-- nebyla zjištěna rizika s negativním dopadem na budoucí hospodaření,
-- podíl pohledávek na rozpočtu: 0,86 %,
-- podíl závazků na rozpočtu: 7,17 %,
-- podíl zastaveného majetku na celkovém majetku: 0,80 %,
-- dluh k průměru příjmů je podle závěrečného účtu 9,40 %.
+Závěrečný účet uvádí zůstatky bankovních účtů k 31. 12. 2025 celkem **43 079 087,13 Kč**. Tento zůstatek není automaticky „volná hotovost“: část prostředků může být účelově vázaná nebo určena na budoucí platby a závazky. Pro odhad volné rezervy je potřeba přehled účelových prostředků, krátkodobých závazků, plánovaných plateb a minimální provozní rezervy.
 
-Závěrečný účet byl schválen zastupitelstvem 24. 6. 2026 usnesením 34/26/Z. Inventarizační zpráva podle závěrečného účtu uvádí, že při inventarizaci nebyly zjištěny rozdíly. Tyto závěry je nutné v analýze uvádět stejně zřetelně jako oblasti pro další ekonomické vyhodnocení.
+## 8. Výsledek přezkoumání a inventarizace
 
-## 8. Priority pro další ověření
+Zpráva Krajského úřadu Libereckého kraje o přezkoumání hospodaření za období 1. 1.–31. 12. 2025 uvádí, že nebyly zjištěny chyby a nedostatky ani rizika s negativním dopadem do budoucna. Závěrečný účet uvádí podíl pohledávek na rozpočtu 0,86 %, podíl závazků 7,17 %, podíl zastaveného majetku 0,80 % a dluh k průměru příjmů 9,40 %. Inventarizační zpráva podle předložených podkladů uvádí, že nebyly zjištěny inventarizační rozdíly.
 
-1. **Rekonstrukce RO 1–10:** ověřit chronologii, usnesení, dopady na jednotlivé investice a konečné závazné ukazatele.
-2. **Investiční portfolio:** propojit rozpočty, smlouvy, dodatky, faktury, dotace, skutečné platby a termíny dokončení.
-3. **Nedokončený majetek:** rozpad 64,923 mil. Kč na konkrétní projekty a jejich stáří.
-4. **Úvěr do 60 mil. Kč:** zkontrolovat schválení, podmínky, čerpání po 31. 12. 2025 a dopad do budoucích rozpočtů.
-5. **Volná hotovost:** oddělit peníze vázané od skutečně disponibilní rezervy.
-6. **Účetní výsledek:** propojit výkaz zisku a ztráty s rozvahou, peněžními toky a závěrečným účtem.
-7. **Meziroční srovnání 2024–2025:** používat stejné definice a uvádět rozdíly mezi rozpočtem, účetnictvím a hotovostí.
+Závěrečný účet byl schválen zastupitelstvem dne 24. 6. 2026 usnesením 34/26/Z. Zákonné přezkoumání je nutné uvádět férově a viditelně; současně není náhradou za samostatnou analýzu nákladů, přínosů a budoucího provozu jednotlivých investic.
 
-## 9. Metodická omezení
+## 9. Prioritní kroky k uzavření roku 2025
 
-Toto je pracovní analytická verze založená na dodaných dokumentech. Není to zákonný audit ani tvrzení o pochybení. Úplná analýza investic vyžaduje navázat na smlouvy, dodatky, veřejné zakázky a platby. U každého podezřelého nebo neobvyklého údaje je nutné nejprve ověřit účetní a právní kontext.
+1. Vyžádat export upraveného rozpočtu z účetního systému po RO č. 2, 3, 7 a 8 a potvrdit, zda chyby existují pouze v PDF, nebo také v evidenci.
+2. Propojit významné investice s veřejnými zakázkami, smlouvami, dodatky, fakturami, dotacemi a úhradami.
+3. Rozpadnout 64,923 mil. Kč nedokončeného hmotného majetku podle konkrétních akcí.
+4. Prověřit čerpání investičního rozpočtu a důvody rozdílu mezi plánem a skutečností.
+5. Připravit srovnání 2024–2025 se sjednocenými definicemi.
+6. Poté uzavřít rok 2025 jako kontrolní základnu a stejnou metodikou zpracovat rok 2026.
 
-**Zásady:** schválený rozpočet ≠ upravený rozpočet ≠ skutečnost; účetní zisk ≠ rozpočtové saldo ≠ hotovost; smluvní cena ≠ skutečně zaplacená částka; chybějící údaj ≠ nula; finanční signál ≠ důkaz pochybení.
+## 10. Metodická omezení
+
+Analýza vychází z dodaných dokumentů. Nejde o zákonný audit ani tvrzení o pochybení. U nesouladů v rozpočtových opatřeních chybí potvrzení proti zdrojovému exportu z účetního systému. Úplné vyhodnocení investic vyžaduje návaznost na smlouvy, dodatky, veřejné zakázky, faktury a platby.
+
+**Zásady:** schválený rozpočet ≠ rozpočet po změnách ≠ skutečnost; účetní výsledek ≠ rozpočtové saldo ≠ hotovost; smluvní cena ≠ zaplacená částka; chybějící údaj ≠ nula; finanční signál ≠ důkaz pochybení.
