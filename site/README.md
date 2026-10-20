@@ -4,7 +4,7 @@
 
 - `index.html` – hlavní stránka s finančními ukazateli, navigací a metodikou.
 - `finance.html` – srovnání rozpočtových údajů 2024–2026 a kontrolní zjištění.
-- `dotace.html` – funkční dotační radar s filtrováním dvou otevřených výzev OPŽP ověřených 20. 10. 2026. Každá vede na oficiální stránku; vhodnost pro konkrétní projekt města je nutné ověřit.
+- `dotace.html` – dotační radar napojený na centrální API projektu `ReneHlouzek/dotacni-radar-lomnice`. Načítá až 500 záznamů z `/grants`, statistiky z `/stats` a seznam evidovaných zdrojů z `/sources`. Umožňuje hledání, filtr podle tematické oblasti, stavu a poskytovatele. Pokud API není dostupné, zobrazí se záložní seznam sedmi příležitostí a upozornění, že nejde o úplnou evidenci.
 - `zakazky.html` – funkční vyhledávání a filtry nad datovým indexem projektu `ReneHlouzek/lomnice-verejne-zakazky`. Index poskytuje 163 projektových celků v čase jeho poslední synchronizace; počet se mění.
 - `investice.html` – vyhledávání projektů a dynamický detail s dostupnými událostmi, cenami, zdroji a potvrzenými smluvními vazbami.
 - `app.js` – sdílená logika datových obrazovek.
@@ -16,7 +16,8 @@
 - Strojově čitelný index: `data/index.json` ve výše uvedeném repozitáři.
 - Detail projektu: `data/projects/<id>.json`.
 - Potvrzené vazby smluv a dodatků: `data/contract_links.json`.
-- Dotační radar vychází z oficiálních stránek OPŽP pro [105. výzvu](https://opzp.cz/dotace/105-vyzva/) a [109. výzvu](https://opzp.cz/dotace/109-vyzva/); stav je nutné před rozhodnutím znovu ověřit.
+- Centrální dotační evidence a API: [dotacni-radar-lomnice](https://github.com/ReneHlouzek/dotacni-radar-lomnice); veřejné API: `https://dotacni-radar-lomnice.onrender.com`.
+- Centrální radar eviduje importy z DotaceEU, SFŽP, Ministerstva kultury, NRB, MMR, MPSV, AOPK a Jednotného dotačního portálu. Záznamy z automatického katalogu nemusejí být jednotlivé skutečné dotační výzvy; stav, termín a podmínky se musí ověřit na oficiálním zdroji.
 
 Datový katalog zakázek se načítá za běhu z veřejného `raw.githubusercontent.com`. Pokud se zdroj nedá načíst, stránka má zobrazit chybové upozornění a ne falešná nulová data. Zdrojový index a detail se mohou aktualizovat nezávisle na tomto webu.
 
@@ -38,7 +39,7 @@ Web se nasazuje pomocí `.github/workflows/pages.yml` ze složky `site/`. Workfl
 ## Další práce
 
 1. Otestovat živé načítání dat a zobrazení všech tří obrazovek na desktopu i mobilu.
-2. Rozšířit dotační radar o další oficiální programy a jasně evidovat datum poslední kontroly.
+2. Ověřit kvalitu záznamů v centrálním dotačním katalogu; oddělit skutečné výzvy od obecných odkazů na programy, doplnit způsobilé žadatele, termíny, alokace a datum kontroly.
 3. Propojit zakázky a investice s rozpočtovými položkami, usneseními, dotačními rozhodnutími a skutečnými úhradami.
 4. Přidat přístupné tabulkové alternativy a ověřit ovládání klávesnicí.
 5. Automaticky testovat odkazy, strukturu JSON a chyby načítání.
