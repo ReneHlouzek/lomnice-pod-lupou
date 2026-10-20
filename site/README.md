@@ -4,7 +4,7 @@
 
 - `index.html` – hlavní stránka s finančními ukazateli, navigací a metodikou.
 - `finance.html` – srovnání rozpočtových údajů 2024–2026 a kontrolní zjištění.
-- `dotace.html` – dotační radar napojený na centrální API projektu `ReneHlouzek/dotacni-radar-lomnice`. Načítá až 500 záznamů z `/grants`, statistiky z `/stats` a seznam evidovaných zdrojů z `/sources`. Umožňuje hledání, filtr podle tematické oblasti, stavu a poskytovatele. Pokud API není dostupné, zobrazí se záložní seznam sedmi příležitostí a upozornění, že nejde o úplnou evidenci.
+- `dotace.html` – dotační radar napojený na centrální API projektu `ReneHlouzek/dotacni-radar-lomnice`. Načítá až 500 záznamů z `/grants`, statistiky z `/stats` a seznam evidovaných zdrojů z `/sources`. Umožňuje hledání a filtry podle tematické oblasti, stavu a poskytovatele. Pokud API není dostupné, zobrazí se záložní seznam sedmi záznamů s výslovným stavem „K posouzení“; záložní záznam se nesmí automaticky vydávat za potvrzenou otevřenou výzvu. Opravena také extrakce termínů z ISO i českého formátu data.
 - `zakazky.html` – funkční vyhledávání a filtry nad datovým indexem projektu `ReneHlouzek/lomnice-verejne-zakazky`. Index poskytuje 163 projektových celků v čase jeho poslední synchronizace; počet se mění.
 - `investice.html` – vyhledávání projektů a dynamický detail s dostupnými událostmi, cenami, zdroji a potvrzenými smluvními vazbami.
 - `app.js` – sdílená logika datových obrazovek.
@@ -39,7 +39,7 @@ Web se nasazuje pomocí `.github/workflows/pages.yml` ze složky `site/`. Workfl
 ## Další práce
 
 1. Otestovat živé načítání dat a zobrazení všech tří obrazovek na desktopu i mobilu.
-2. Ověřit kvalitu záznamů v centrálním dotačním katalogu; oddělit skutečné výzvy od obecných odkazů na programy, doplnit způsobilé žadatele, termíny, alokace a datum kontroly.
+2. Ověřit kvalitu záznamů v centrálním dotačním katalogu; oddělit skutečné výzvy od obecných odkazů na programy, doplnit způsobilé žadatele, termíny, alokace a datum kontroly. Do té doby nepovažovat automaticky importovaný status ani tematickou shodu za potvrzenou způsobilost.
 3. Propojit zakázky a investice s rozpočtovými položkami, usneseními, dotačními rozhodnutími a skutečnými úhradami.
 4. Přidat přístupné tabulkové alternativy a ověřit ovládání klávesnicí.
 5. Automaticky testovat odkazy, strukturu JSON a chyby načítání.
