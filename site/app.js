@@ -49,10 +49,19 @@ async function dotace(){
  // The grant list is the primary dependency. Stats and source catalogue are optional:
  // failure of either must not discard the complete grant list and show only 7 fallback cards.
  try{
-  const apiGrants=await json(GRANTS_API+"/grants?limit=500");
-  if(!Array.isArray(apiGrants)||!apiGrants.length)throw Error("Endpoint /grants nevrátil neprázdný seznam (čeká se pole JSON)");
+  let apiGrants,primaryError=null;
+  try{
+   apiGrants=await json(GRANTS_API+"/grants?limit=500");
+   if(!Array.isArray(apiGrants)||!apiGrants.length)throw Error("Endpoint /grants nevrátil neprázdný seznam");
+  }catch(e){
+   primaryError=e;
+   console.warn("Rozšířený endpoint /grants selhal; zkouším jednodušší /grants-list.",e);
+   apiGrants=await json(GRANTS_API+"/grants-list?limit=500");
+  }
+  if(!Array.isArray(apiGrants)||!apiGrants.length)throw Error("Ani /grants, ani /grants-list nevrátily seznam dotací");
   current=apiGrants.map(normalizeGrant);
   sourceMode="centrální databáze Dotační Radar Lomnice";
+  if(primaryError){const fallbackNote=$("#grant-api-note");if(fallbackNote)fallbackNote.textContent="Seznam se načetl z alternativního endpointu centrální databáze. Některá doplňující pole mohou chybět; celková evidence není nahrazena ručním seznamem.";}
   const optional=await Promise.allSettled([json(GRANTS_API+"/stats"),json(GRANTS_API+"/sources")]);
   if(optional[0].status==="fulfilled"&&optional[0].value&&typeof optional[0].value==="object")apiStats=optional[0].value;
   else console.warn("Dotační radar: /stats není dostupné; používají se odvozené statistiky.",optional[0].reason);
