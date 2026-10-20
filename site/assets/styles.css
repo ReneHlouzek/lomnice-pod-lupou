@@ -26,3 +26,29 @@ footer{background:#0c222d;color:#d0dedd;padding:30px 0}.footergrid{display:flex;
 .year-tabs a:hover,.year-tabs a:focus-visible{background:var(--navy);border-color:var(--navy);color:#fff;outline-offset:3px}
 .year-section{scroll-margin-top:18px}
 @media(max-width:560px){.year-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.year-tabs button{min-width:0;padding:10px 5px;font-size:.85rem}}
+
+/* Investment detail: timeline and contract facts */
+.investment-detail-top{padding-top:8px}
+.investment-subsection{margin-top:30px}
+.investment-facts{margin:0}
+.investment-facts>div{display:grid;grid-template-columns:minmax(130px,.8fr) minmax(0,1.2fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+.investment-facts>div:last-child{border-bottom:0}
+.investment-facts dt{color:var(--muted);font-size:.9rem}
+.investment-facts dd{margin:0;font-weight:700;overflow-wrap:anywhere}
+.timeline{position:relative;padding:18px 0 0 18px;border-left:3px solid var(--teal);margin:14px 0 0 10px}
+.timeline-origin{margin:0 0 22px 0;padding:0 0 0 14px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline}
+.timeline-origin span{color:var(--muted)}
+.timeline-origin strong{font-size:1rem}
+.timeline-events{display:grid;gap:14px}
+.timeline-event{position:relative;padding-left:14px}
+.timeline-dot{position:absolute;left:-28px;top:18px;width:12px;height:12px;border-radius:50%;background:var(--teal);border:3px solid var(--paper);box-shadow:0 0 0 1px var(--teal)}
+.timeline-date{font-size:.82rem;color:var(--muted);font-weight:800;margin-bottom:5px}
+.timeline-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.timeline-card p{margin:6px 0;color:var(--muted);font-size:.9rem}
+.timeline-price{font-weight:800;font-size:.92rem}
+.timeline-plan{display:flex;gap:14px;align-items:flex-start;margin:20px 0 20px 14px;padding:14px 0 14px 16px;border-top:2px dashed var(--teal);color:var(--ink)}
+.timeline-plan-line{display:block;width:34px;min-width:34px;margin-top:9px;border-top:2px dashed var(--teal)}
+.timeline-plan p{margin:5px 0 0;color:var(--muted);font-size:.9rem}
+.timeline-end{border-top:1px solid var(--line);padding-top:14px}
+#investment-catalog{scroll-margin-top:18px}
+@media(max-width:600px){.investment-facts>div{grid-template-columns:1fr;gap:4px}.timeline{margin-left:4px;padding-left:14px}.timeline-dot{left:-24px}.timeline-card{padding:12px}}
