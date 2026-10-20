@@ -45,21 +45,29 @@ function grantCard(g){const days=g.deadline?Math.ceil((new Date(g.deadline+"T23:
 async function dotace(){
  const list=$("#grant-list");if(!list)return;
  const q=$("#grant-search"),area=$("#grant-area"),status=$("#grant-status"),provider=$("#grant-provider");
- let current=[...grants].map(normalizeGrant),sourceMode="záložní seznam",sourcesList=[];
+ let current=[...grants].map(normalizeGrant),sourceMode="záložní seznam",sourcesList=[],apiStats=null,apiError=null;
+ // The grant list is the primary dependency. Stats and source catalogue are optional:
+ // failure of either must not discard the complete grant list and show only 7 fallback cards.
  try{
-  const results=await Promise.all([json(GRANTS_API+"/grants?limit=500"),json(GRANTS_API+"/stats"),json(GRANTS_API+"/sources")]);
-  const apiGrants=results[0],apiStats=results[1],apiSources=results[2];
-  if(!Array.isArray(apiGrants)||!apiGrants.length)throw Error("Databáze nevrátila žádné záznamy");
-  window.__grantApiStats=apiStats||{};
-  current=apiGrants.map(normalizeGrant);sourcesList=Array.isArray(apiSources)?apiSources:[];
+  const apiGrants=await json(GRANTS_API+"/grants?limit=500");
+  if(!Array.isArray(apiGrants)||!apiGrants.length)throw Error("Endpoint /grants nevrátil neprázdný seznam (čeká se pole JSON)");
+  current=apiGrants.map(normalizeGrant);
   sourceMode="centrální databáze Dotační Radar Lomnice";
-  $("#grant-alloc").textContent=apiStats.grants??current.length;
+  const optional=await Promise.allSettled([json(GRANTS_API+"/stats"),json(GRANTS_API+"/sources")]);
+  if(optional[0].status==="fulfilled"&&optional[0].value&&typeof optional[0].value==="object")apiStats=optional[0].value;
+  else console.warn("Dotační radar: /stats není dostupné; používají se odvozené statistiky.",optional[0].reason);
+  if(optional[1].status==="fulfilled"&&Array.isArray(optional[1].value))sourcesList=optional[1].value;
+  else console.warn("Dotační radar: /sources není dostupné; seznam zdrojů nebude zobrazen.",optional[1].reason);
+  window.__grantApiStats=apiStats||{};
+  $("#grant-alloc").textContent=apiStats?.grants??current.length;
   const last=sourcesList.map(x=>x.checked_at).filter(Boolean).sort().pop();
   $("#grant-updated").textContent=last?date(String(last).slice(0,10)):"Datum kontroly neuvedeno";
  }catch(e){
-  console.warn("Dotační API není dostupné; používá se záložní seznam.",e);
+  apiError=e;
+  console.error("Nepodařilo se načíst hlavní seznam z centrálního Dotačního radaru.",e);
+  window.__grantApiStats={};
   $("#grant-alloc").textContent=current.length;$("#grant-updated").textContent="Záložní seznam";
-  const note=$("#grant-api-note");if(note)note.textContent="Centrální databázi se nepodařilo načíst; zobrazuje se pouze záložní seznam, nikoli úplná evidence.";
+  const note=$("#grant-api-note");if(note)note.textContent="Centrální seznam dotací se nepodařilo načíst; zobrazuje se pouze 7 záložních záznamů. Technická chyba: "+(e?.message||String(e));
  }
  const today=new Date();today.setHours(0,0,0,0);
  const isFutureDeadline=g=>!!g.deadline&&new Date(g.deadline+"T23:59:59Z")>=today;
