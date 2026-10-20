@@ -10,7 +10,6 @@ Veřejně dohledatelný a zdrojově doložený přehled financí, investic, dota
 - Automatické upozornění je podnět k ověření, nikoli důkaz pochybení.
 - Neúspěšný import nesmí přepsat poslední validní výstup.
 - Každé zveřejněné finanční tvrzení má mít zdroj, stranu/řádek, období a jednotku.
-- Rozdíl v číslech je nejprve nutné vysvětlit definicí a rozsahem položek; sám o sobě nedokazuje pochybení.
 
 ## Oblasti
 - `finance/` – finanční podklady po letech včetně rozpočtů, rozpočtových opatření, účetních výkazů, závěrečných účtů a analýz.
@@ -22,12 +21,12 @@ Veřejně dohledatelný a zdrojově doložený přehled financí, investic, dota
 - `tests/` – testy importu a validace.
 
 ## Aktuální stav finančních podkladů
-- Rok 2024: do repozitáře byla zařazena sada 21 PDF. Probíhá věcná kontrola finanční analýzy vůči primárním dokumentům.
-- Rozpočtová opatření č. 1–8 za rok 2024 jsou identifikována. Soubor `Z.pdf` obsahově odpovídá RO č. 3.
-- Zjištěné otevřené body a postup kontroly jsou v `finance/2024/analyzy/STAV_KONTROLY_2024.md`.
-- Inventář dokumentů je v `finance/2024/metadata/INVENTAR_PRVNI_DAVKY.md`.
-- Finanční analýzu za rok 2024 zatím nepovažovat za finální, dokud nebudou uzavřeny ověřovací body a publikována revidovaná verze.
-- Další roky budou doplňovány až po uzavření a zdokumentování předchozí sady.
+- Rok 2024: do repozitáře byla zařazena sada 21 PDF.
+- Rozpočtová opatření č. 1–8 za rok 2024 jsou identifikována; soubor `Z.pdf` obsahově odpovídá RO č. 3.
+- Kontrola finanční analýzy vůči primárním dokumentům probíhá. Otevřené body jsou uvedeny v `finance/2024/analyzy/STAV_KONTROLY_2024.md`.
+- Inventář dokumentů je v `finance/2024/metadata/INVENTAR_PRVNI_DAVKY.md`; v jeho původní verzi zbývá opravit počet dokumentů.
+- Analytické dokumenty jsou pracovní výstupy a nenahrazují oficiální účetní výkazy ani přezkoumání hospodaření.
+- Další rok bude zpracován po uzavření a zdokumentování sady 2024.
 
 ## Metodické omezení
-Repozitář je pracovní analytický projekt, nikoli účetní evidence města ani auditní stanovisko. Před zveřejněním závěrů je nutné ověřit je vůči primárním dokumentům. Případné nesrovnalosti formulovat věcně a bez nepodložených obvinění.
+Repozitář je pracovní analytický projekt, nikoli účetní evidence města ani auditní stanovisko. Před zveřejněním závěrů je nutné ověřit je vůči primárním dokumentům. Rozdíly v agregovaných řádcích je nejprve třeba vysvětlit definicí a rozsahem položek; samy o sobě nedokazují pochybení.
