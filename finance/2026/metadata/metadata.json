@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "fiscal_year": 2026,
+  "status": "in_progress",
+  "as_of": "2026-10-20",
+  "source_pdf_count": 7,
+  "documents": [
+    {
+      "category": "budget",
+      "path": "finance/2026/rozpocty/Schvaleny_rozpocet_2026.pdf",
+      "original_name": "Schválený rozpočet 2026 - úřední deska.pdf"
+    },
+    {
+      "category": "budget_amendment",
+      "number": 1,
+      "path": "finance/2026/rozpoctova-opatreni/RO_2026_01.pdf",
+      "original_name": "Rozpočtové opatření č.1 na web.pdf"
+    },
+    {
+      "category": "budget_amendment",
+      "number": 2,
+      "path": "finance/2026/rozpoctova-opatreni/RO_2026_02.pdf",
+      "original_name": "Rozpočtové opatření č.2.pdf"
+    },
+    {
+      "category": "budget_amendment",
+      "number": 3,
+      "path": "finance/2026/rozpoctova-opatreni/RO_2026_03.pdf",
+      "original_name": "Rozpočet 2026 - rozpočtové opatření č.3.pdf"
+    },
+    {
+      "category": "medium_term_outlook_draft",
+      "path": "finance/2026/strednedoby-vyhled/Navrh_vyhledu_2027_2030.pdf",
+      "original_name": "Návrh výhledu 2027-2030.pdf"
+    },
+    {
+      "category": "medium_term_outlook_approved",
+      "path": "finance/2026/strednedoby-vyhled/Schvaleny_vyhled_2027_2030.pdf",
+      "original_name": "Schválený střednědobý výhled 2027-2030.pdf"
+    },
+    {
+      "category": "working_analysis",
+      "path": "finance/2026/analyzy/Financni_audit_Lomnice_2026.pdf",
+      "original_name": "Financni_audit_Lomnice_2026.pdf",
+      "note": "Dodaný analytický materiál; nejde o zákonný audit."
+    }
+  ],
+  "checks": [
+    "RO1 revenue summary arithmetic inconsistency: expected 193884, PDF says 193014 (thousand CZK).",
+    "RO2 and RO3 summaries arithmetically chain from 193884.",
+    "Year 2026 is open; actuals and year-end statements not supplied."
+  ]
+}
