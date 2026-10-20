@@ -60,9 +60,16 @@ async function dotace(){
   $("#grant-alloc").textContent=current.length;$("#grant-updated").textContent="Záložní seznam";
   const note=$("#grant-api-note");if(note)note.textContent="Centrální databázi se nepodařilo načíst; zobrazuje se pouze záložní seznam, nikoli úplná evidence.";
  }
- const open=current.filter(g=>g.status==="Otevřená"&&(!g.deadline||new Date(g.deadline+"T23:59:59Z")>=new Date())).length;
- $("#grant-open").textContent=open;
- const future=current.map(g=>g.deadline).filter(d=>d&&new Date(d+"T23:59:59Z")>=new Date()).sort();
+ const today=new Date();today.setHours(0,0,0,0);
+ const isFutureDeadline=g=>!!g.deadline&&new Date(g.deadline+"T23:59:59Z")>=today;
+ const verifiedOpen=current.filter(g=>g.status==="Otevřená"&&(!g.deadline||isFutureDeadline(g))).length;
+ const candidates=current.filter(g=>isFutureDeadline(g)&&!["Uzavřená / po termínu","Zrušená"].includes(g.status));
+ // The importer frequently returns "K posouzení" when a listing page omits an explicit status.
+ // Count future-deadline records as candidates to review, never as confirmed open calls.
+ $("#grant-open").textContent=candidates.length;
+ const metricLabel=document.querySelector("#grant-open")?.closest(".metric");
+ if(metricLabel){const label=metricLabel.querySelector(".label");const desc=metricLabel.querySelector(".desc");if(label)label.textContent="Výzvy k prověření";if(desc)desc.textContent=verifiedOpen+" potvrzeně označeno jako otevřené · termín sám o sobě stav nepotvrzuje";}
+ const future=current.map(g=>g.deadline).filter(d=>d&&new Date(d+"T23:59:59Z")>=today).sort();
  $("#grant-deadline").textContent=future.length?date(future[0]):"Ověřit v podmínkách";
  const areaValues=[...new Set(current.map(g=>g.area))].sort((a,b)=>a.localeCompare(b,"cs"));
  area.innerHTML='<option value="">Všechny oblasti</option>'+areaValues.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join("");
