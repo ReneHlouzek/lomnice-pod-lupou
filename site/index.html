@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lomnice pod lupou – veřejně dohledatelný přehled rozpočtu, financí, investic a veřejných zakázek města Lomnice nad Popelkou.">
+  <meta name="theme-color" content="#102c3a">
+  <title>Lomnice pod lupou | Veřejné finance srozumitelně</title>
+  <style>
+    :root{--ink:#172c35;--muted:#5d7078;--paper:#f5f7f5;--white:#fff;--navy:#102c3a;--teal:#137c78;--lime:#d6e86b;--line:#dbe4e1;--soft:#e8f2ef;--warn:#fff3d6;--shadow:0 18px 45px rgba(16,44,58,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+    a{color:inherit}button{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topline{background:var(--navy);color:#dce9e8;font-size:.82rem}.topline .wrap{display:flex;justify-content:space-between;gap:16px;padding:9px 0}
+    header{background:var(--white);border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:850;letter-spacing:-.04em;font-size:1.15rem}.brandmark{width:42px;height:42px;background:var(--teal);color:white;border-radius:13px;display:grid;place-items:center;font-weight:900;font-size:1.2rem;position:relative}.brandmark:after{content:"";position:absolute;width:12px;height:12px;border:3px solid var(--lime);border-radius:50%;right:-3px;top:-3px}
+    nav{display:flex;align-items:center;gap:24px}nav a{text-decoration:none;color:#40545c;font-size:.93rem;font-weight:650}nav a:hover{color:var(--teal)}.navcta{background:var(--navy);color:#fff;padding:11px 16px;border-radius:10px}
+    .hero{background:var(--navy);color:white;overflow:hidden;position:relative}.hero:after{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(214,232,107,.18);border-radius:50%;right:-110px;top:-220px;box-shadow:0 0 0 50px rgba(214,232,107,.035),0 0 0 105px rgba(214,232,107,.025);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:55px;padding:78px 0 72px;position:relative;z-index:1}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;font-weight:800;color:var(--lime);display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:25px;height:2px;background:var(--lime)}
+    h1{font-size:clamp(2.7rem,5.4vw,5rem);line-height:1.02;letter-spacing:-.065em;margin:20px 0 24px;max-width:720px}h1 em{font-style:normal;color:var(--lime)}.hero p{font-size:1.12rem;color:#d4e0e1;max-width:590px;margin:0 0 30px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:11px;padding:13px 18px;font-weight:800;border:1px solid transparent}.btn.primary{background:var(--lime);color:var(--navy)}.btn.ghost{border-color:#61757c;color:white}.btn:hover{transform:translateY(-1px)}
+    .visual{background:#183b48;border:1px solid #355661;border-radius:22px;padding:24px;box-shadow:0 25px 65px rgba(0,0,0,.15);transform:rotate(1deg)}.visual-top{display:flex;justify-content:space-between;align-items:center;color:#dbe8e6;font-size:.82rem;font-weight:750}.live{display:inline-flex;align-items:center;gap:7px;color:var(--lime);font-size:.75rem}.live:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime)}
+    .chart{height:160px;display:flex;align-items:end;gap:12px;border-bottom:1px solid #49616a;margin:22px 0 18px;padding:0 7px}.bar{flex:1;border-radius:7px 7px 0 0;background:#4b9d95;position:relative;min-width:0}.bar:nth-child(2n){background:#a8c6a0}.bar:nth-child(3){background:var(--lime)}.bar span{position:absolute;bottom:-27px;left:50%;transform:translateX(-50%);font-size:.7rem;color:#b9cbcc}.visual-note{margin-top:35px;color:#c3d2d2;font-size:.8rem}.visual-note strong{color:white}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:-1px}.stat{background:white;padding:22px 24px;border:1px solid var(--line);border-top:0}.stat:first-child{border-radius:0 0 0 16px}.stat:last-child{border-radius:0 0 16px 0}.stat-label{font-size:.78rem;color:var(--muted);font-weight:700}.stat-value{font-size:1.65rem;font-weight:850;letter-spacing:-.045em;margin:4px 0}.stat-note{font-size:.78rem;color:var(--muted)}
+    section{padding:78px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}.section-head h2{font-size:clamp(2rem,3.3vw,3.1rem);line-height:1.06;letter-spacing:-.055em;margin:9px 0 0;max-width:660px}.section-head p{max-width:390px;color:var(--muted);margin:0}.kicker{font-size:.76rem;text-transform:uppercase;letter-spacing:.14em;color:var(--teal);font-weight:850}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:25px;box-shadow:0 4px 15px rgba(16,44,58,.025)}.icon{width:43px;height:43px;background:var(--soft);border-radius:12px;display:grid;place-items:center;color:var(--teal);font-size:1.2rem;font-weight:900}.card h3{margin:19px 0 8px;font-size:1.15rem;letter-spacing:-.025em}.card p{color:var(--muted);font-size:.93rem;margin:0 0 17px}.textlink{font-weight:800;color:var(--teal);text-decoration:none;font-size:.9rem}.textlink:hover{text-decoration:underline}
+    .feature{background:#eaf1ee}.feature-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:start}.feature h2{font-size:clamp(2.2rem,3.7vw,3.4rem);line-height:1.05;letter-spacing:-.06em;margin:10px 0 18px}.feature-intro{color:var(--muted);max-width:440px}.yearlist{display:grid;gap:12px}.year{background:white;border:1px solid #d7e3de;border-radius:14px;padding:19px 20px;display:grid;grid-template-columns:80px 1fr auto;align-items:center;gap:15px}.yearnum{font-size:1.25rem;font-weight:900;letter-spacing:-.04em}.year h3{font-size:1rem;margin:0 0 3px}.year p{font-size:.84rem;color:var(--muted);margin:0}.pill{font-size:.72rem;font-weight:800;border-radius:999px;padding:6px 9px;background:#e6f3e8;color:#256b4c;white-space:nowrap}.pill.work{background:var(--warn);color:#835e12}
+    .callout{background:var(--navy);color:white;border-radius:20px;padding:32px;display:flex;justify-content:space-between;align-items:center;gap:28px}.callout h2{font-size:1.8rem;letter-spacing:-.045em;margin:0 0 8px}.callout p{color:#c6d6d8;margin:0;max-width:650px}.callout .btn{white-space:nowrap}
+    .method{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px}.step{border-top:2px solid var(--teal);padding-top:14px}.step strong{display:block;font-size:.95rem;margin-bottom:7px}.step p{font-size:.86rem;color:var(--muted);margin:0}
+    footer{background:#0c222d;color:#d0dedd;padding:38px 0}.footergrid{display:flex;justify-content:space-between;gap:30px;align-items:start}.footerbrand{font-weight:850;color:white;font-size:1.05rem}.footertext{max-width:550px;font-size:.82rem;color:#aabdc0;margin-top:9px}.footlinks{display:flex;gap:18px;flex-wrap:wrap}.footlinks a{font-size:.83rem;color:#d0dedd;text-decoration:none}.footlinks a:hover{color:var(--lime)}.fineprint{font-size:.75rem;color:#8da4a8;margin-top:25px;border-top:1px solid #29414a;padding-top:18px}
+    @media(max-width:850px){nav{gap:13px}nav a:not(.navcta){display:none}.hero-grid{grid-template-columns:1fr;gap:40px;padding:60px 0}.visual{max-width:540px}.feature-grid{grid-template-columns:1fr;gap:30px}.cards{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.method{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.topline .wrap{font-size:.72rem}.topline span:last-child{display:none}.nav{padding:13px 0}.navcta{padding:9px 11px;font-size:.82rem}.hero-grid{padding:48px 0}.hero p{font-size:1rem}h1{font-size:3.1rem}.stats{grid-template-columns:1fr;gap:0}.stat,.stat:first-child,.stat:last-child{border-radius:0;border-top:1px solid var(--line)}.stat:first-child{border-radius:13px 13px 0 0}.stat:last-child{border-radius:0 0 13px 13px}.cards{grid-template-columns:1fr}section{padding:55px 0}.year{grid-template-columns:55px 1fr;gap:12px}.year .pill{grid-column:2;justify-self:start}.callout{padding:25px;align-items:start;flex-direction:column}.method{grid-template-columns:1fr 1fr}.footergrid{flex-direction:column}.visual{padding:19px}.chart{gap:8px}}
+  </style>
+</head>
+<body>
+  <div class="topline"><div class="wrap"><span>VEŘEJNÁ DATA · MÍSTNÍ ROZPOČET · OTEVŘENÉ PODKLADY</span><span>Lomnice nad Popelkou</span></div></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#uvod" aria-label="Lomnice pod lupou – úvod"><span class="brandmark">L</span><span>Lomnice pod lupou</span></a>
+      <nav aria-label="Hlavní navigace"><a href="#prehled">Přehled</a><a href="#roky">Rozpočty po letech</a><a href="#metodika">Jak pracujeme</a><a class="navcta" href="#zdroje">Prohlédnout podklady ↗</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="uvod">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Město černé na bílém</div>
+          <h1>Veřejné peníze.<br><em>Jasný přehled.</em></h1>
+          <p>Rozpočet, investice a smlouvy Lomnice nad Popelkou bez složité úředničtiny. Založeno na dokumentech, číslech a ověřitelných zdrojích.</p>
+          <div class="actions"><a class="btn primary" href="#prehled">Prozkoumat přehled ↓</a><a class="btn ghost" href="https://github.com/ReneHlouzek/lomnice-pod-lupou">Zdrojový archiv na GitHubu ↗</a></div>
+        </div>
+        <div class="visual" aria-label="Ilustrační graf vývoje rozpočtu">
+          <div class="visual-top"><span>Rozpočet pod lupou</span><span class="live">Živý projekt</span></div>
+          <div class="chart" aria-hidden="true"><div class="bar" style="height:40%"><span>24</span></div><div class="bar" style="height:54%"><span>25</span></div><div class="bar" style="height:76%"><span>26</span></div><div class="bar" style="height:63%"><span>27</span></div><div class="bar" style="height:90%"><span>28</span></div><div class="bar" style="height:68%"><span>29</span></div></div>
+          <div class="visual-note"><strong>Čísla s kontextem.</strong> Graf je zatím pouze ilustrační, nevyjadřuje skutečné hodnoty. Každý publikovaný ukazatel musí mít zdroj.</div>
+        </div>
+      </div>
+    </section>
+    <div class="wrap stats" aria-label="Aktuální stav dat">
+      <div class="stat"><div class="stat-label">Poslední uzavřený rok v analýze</div><div class="stat-value">2025</div><div class="stat-note">Závěrečný účet a hlavní výkazy jsou k dispozici</div></div>
+      <div class="stat"><div class="stat-label">Aktuálně sledovaný rozpočet</div><div class="stat-value">2026</div><div class="stat-note">Průběžná kontrola; rok ještě není uzavřen</div></div>
+      <div class="stat"><div class="stat-label">Rozpočtová opatření 2026</div><div class="stat-value">1–3</div><div class="stat-note">Zatím evidována tři zveřejněná opatření</div></div>
+    </div>
+    <section id="prehled">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">Co tu najdete</div><h2>Veřejné finance, kterým jde rozumět.</h2></div><p>Nejde jen o číslo v tabulce. Důležité je, co znamená, odkud pochází a co z něj lze — nebo nelze — vyvodit.</p></div>
+        <div class="cards">
+          <article class="card"><div class="icon">↗</div><h3>Rozpočty a hospodaření</h3><p>Schválený rozpočet, změny během roku a skutečné plnění. Tři různé věci, které musí zůstat oddělené.</p><a class="textlink" href="https://github.com/ReneHlouzek/lomnice-pod-lupou/tree/main/finance">Prohlédnout finanční podklady ↗</a></article>
+          <article class="card"><div class="icon">⌂</div><h3>Investice města</h3><p>Prostor pro sledování plánovaných akcí, jejich rozpočtů, termínů, smluv, dodatků a skutečně uhrazených částek.</p><a class="textlink" href="https://github.com/ReneHlouzek/lomnice-pod-lupou">Zatím ve vývoji ↗</a></article>
+          <article class="card"><div class="icon">§</div><h3>Smlouvy a zakázky</h3><p>Podklady k veřejným zakázkám a smlouvám s cílem spojit cenu, dodatky, dodavatele a platby do srozumitelného přehledu.</p><a class="textlink" href="https://github.com/ReneHlouzek">Zdrojový profil projektu ↗</a></article>
+          <article class="card"><div class="icon">◎</div><h3>Dotace a financování</h3><p>Rozlišujeme plánovanou dotaci, podanou žádost, přiznanou podporu a skutečně přijaté peníze.</p><span class="textlink">Datová část se připravuje</span></article>
+          <article class="card"><div class="icon">✓</div><h3>Kontrolní upozornění</h3><p>Návaznosti rozpočtových opatření, aritmetické rozdíly a neúplné údaje. Každý signál vyžaduje ověření.</p><a class="textlink" href="https://github.com/ReneHlouzek/lomnice-pod-lupou/tree/main/finance/2026/analyzy">Ukázka kontroly roku 2026 ↗</a></article>
+          <article class="card"><div class="icon">⌕</div><h3>Dokumenty a zdroje</h3><p>Originální PDF a průběžné analýzy na jednom místě. U každého důležitého závěru musí být dohledatelná cesta ke zdroji.</p><a class="textlink" href="https://github.com/ReneHlouzek/lomnice-pod-lupou">Otevřít archiv ↗</a></article>
+        </div>
+      </div>
+    </section>
+    <section class="feature" id="roky">
+      <div class="wrap feature-grid">
+        <div><div class="kicker">Rozpočty po letech</div><h2>Nejdřív data.<br>Potom závěry.</h2><p class="feature-intro">Přehled se rozšiřuje postupně. U každého roku uvádíme, jaké dokumenty máme, co jsme ověřili a co ještě chybí. Nedostupný údaj nevydáváme za nulu.</p><p><a class="textlink" href="https://github.com/ReneHlouzek/lomnice-pod-lupou">Všechny podklady v repozitáři ↗</a></p></div>
+        <div class="yearlist">
+          <article class="year"><div class="yearnum">2024</div><div><h3>Srovnávací základna</h3><p>Finanční analýza, rozpočtová opatření a rekonstrukce vybraných údajů.</p></div><span class="pill">Analyzováno</span></article>
+          <article class="year"><div class="yearnum">2025</div><div><h3>Uzavřené hospodaření</h3><p>FIN 2-12 M, závěrečný účet, účetní výkazy a kontrola návaznosti opatření.</p></div><span class="pill">Pracovní analýza</span></article>
+          <article class="year"><div class="yearnum">2026</div><div><h3>Průběžný rozpočet</h3><p>Schválený rozpočet, RO č. 1–3 a střednědobý výhled. Skutečné plnění zatím není doloženo.</p></div><span class="pill work">Otevřený rok</span></article>
+        </div>
+      </div>
+    </section>
+    <section id="metodika">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">Naše pravidla</div><h2>Transparentnost není dojem. Je to postup.</h2></div><p>Projekt je nezávislý pracovní přehled veřejných dokumentů. Není účetnictvím města ani zákonným auditem.</p></div>
+        <div class="method">
+          <div class="step"><strong>01 / Primární zdroje</strong><p>Vyhledáváme originální dokumenty a u tvrzení uvádíme dohledatelný zdroj.</p></div>
+          <div class="step"><strong>02 / Srovnatelná čísla</strong><p>Rozpočet, upravený rozpočet a skutečnost nepovažujeme za zaměnitelné ukazatele.</p></div>
+          <div class="step"><strong>03 / Ověřit, neobviňovat</strong><p>Rozdíl v tabulce je důvod ke kontrole, nikoli sám o sobě důkaz chyby nebo pochybení.</p></div>
+          <div class="step"><strong>04 / Přiznat limity</strong><p>Uvádíme, co víme, co nevíme a jaké podklady je potřeba ještě získat.</p></div>
+        </div>
+        <div class="callout" id="zdroje" style="margin-top:42px"><div><h2>Chcete jít přímo ke zdrojům?</h2><p>V repozitáři najdete původní dokumenty, inventáře, metodické poznámky i průběžné analýzy. Web je první návrh rozhraní — datové přehledy se budou doplňovat až po ověření.</p></div><a class="btn primary" href="https://github.com/ReneHlouzek/lomnice-pod-lupou">Otevřít GitHub ↗</a></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><div class="footergrid"><div><div class="footerbrand">Lomnice pod lupou</div><div class="footertext">Srozumitelný přehled veřejných financí, investic a smluv města Lomnice nad Popelkou. Projekt pracuje s veřejnými zdroji a jeho závěry se průběžně ověřují.</div></div><div class="footlinks"><a href="https://github.com/ReneHlouzek/lomnice-pod-lupou">GitHub</a><a href="#metodika">Metodika</a><a href="#roky">Přehled let</a></div></div><div class="fineprint">První návrh webu · Stav obsahu: 20. 10. 2026 · Ilustrační graf v úvodním bloku není skutečná datová vizualizace.</div></div></footer>
+</body>
+</html>
