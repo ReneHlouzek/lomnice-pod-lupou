@@ -50,6 +50,7 @@ async function dotace(){
   const results=await Promise.all([json(GRANTS_API+"/grants?limit=500"),json(GRANTS_API+"/stats"),json(GRANTS_API+"/sources")]);
   const apiGrants=results[0],apiStats=results[1],apiSources=results[2];
   if(!Array.isArray(apiGrants)||!apiGrants.length)throw Error("Databáze nevrátila žádné záznamy");
+  window.__grantApiStats=apiStats||{};
   current=apiGrants.map(normalizeGrant);sourcesList=Array.isArray(apiSources)?apiSources:[];
   sourceMode="centrální databáze Dotační Radar Lomnice";
   $("#grant-alloc").textContent=apiStats.grants??current.length;
@@ -64,11 +65,14 @@ async function dotace(){
  const isFutureDeadline=g=>!!g.deadline&&new Date(g.deadline+"T23:59:59Z")>=today;
  const verifiedOpen=current.filter(g=>g.status==="Otevřená"&&(!g.deadline||isFutureDeadline(g))).length;
  const candidates=current.filter(g=>isFutureDeadline(g)&&!["Uzavřená / po termínu","Zrušená"].includes(g.status));
- // The importer frequently returns "K posouzení" when a listing page omits an explicit status.
- // Count future-deadline records as candidates to review, never as confirmed open calls.
- $("#grant-open").textContent=candidates.length;
+ // The central API is the source of truth for aggregate counts. Do not recompute
+ // the open-call total from frontend-normalized deadlines/statuses.
+ const openCount=sourceMode==="centrální databáze Dotační Radar Lomnice"
+   ? Number(window.__grantApiStats?.open_grants ?? verifiedOpen)
+   : candidates.length;
+ $("#grant-open").textContent=Number.isFinite(openCount)?openCount:candidates.length;
  const metricLabel=document.querySelector("#grant-open")?.closest(".metric");
- if(metricLabel){const label=metricLabel.querySelector(".label");const desc=metricLabel.querySelector(".desc");if(label)label.textContent="Výzvy k prověření";if(desc)desc.textContent=verifiedOpen+" potvrzeně označeno jako otevřené · termín sám o sobě stav nepotvrzuje";}
+ if(metricLabel){const label=metricLabel.querySelector(".label");const desc=metricLabel.querySelector(".desc");if(label)label.textContent=sourceMode==="centrální databáze Dotační Radar Lomnice"?"Otevřené dotace":"Výzvy k prověření";if(desc)desc.textContent=sourceMode==="centrální databáze Dotační Radar Lomnice"?"Počet podle centrální databáze; stav ověřte v oficiálních podmínkách":verifiedOpen+" potvrzeně označeno jako otevřené · termín sám o sobě stav nepotvrzuje";}
  const future=current.map(g=>g.deadline).filter(d=>d&&new Date(d+"T23:59:59Z")>=today).sort();
  $("#grant-deadline").textContent=future.length?date(future[0]):"Ověřit v podmínkách";
  const areaValues=[...new Set(current.map(g=>g.area))].sort((a,b)=>a.localeCompare(b,"cs"));
