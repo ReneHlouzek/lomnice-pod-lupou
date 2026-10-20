@@ -1,5 +1,134 @@
 {
   "schema_version": 1,
   "fiscal_year": 2025,
-  "documents": []
+  "status": "source_set_sorted; cross_checks_in_progress",
+  "source_pdf_count": 24,
+  "note": "24 dodaných PDF zahrnuje zdrojové účetní a rozpočtové dokumenty i samostatný pracovní analytický PDF materiál.",
+  "documents": [
+    {
+      "category": "budget",
+      "path": "finance/2025/rozpocty/Navrh_rozpoctu_2025.pdf",
+      "original_name": "Návrh rozpočtu 2025.pdf"
+    },
+    {
+      "category": "budget",
+      "path": "finance/2025/rozpocty/Navrh_rozpoctu_2025_zavazne_ukazatele.pdf",
+      "original_name": "Návrh rozpočtu 2025 - závazné ukazatele.pdf"
+    },
+    {
+      "category": "budget",
+      "path": "finance/2025/rozpocty/Rozpocet_2025.pdf",
+      "original_name": "Rozpočet 2025.pdf"
+    },
+    {
+      "category": "budget",
+      "path": "finance/2025/rozpocty/Rozpocet_2025_uredni_deska.pdf",
+      "original_name": "Schválený rozpočtu 2025 - úřední deska.pdf"
+    },
+    {
+      "category": "budget_amendment",
+      "number": 1,
+      "path": "finance/2025/rozpoctova-opatreni/RO_2025_01.pdf"
+    },
+    {
+      "category": "budget_amendment",
+      "number": 2,
+      "path": "finance/2025/rozpoctova-opatreni/RO_2025_02.pdf"
+    },
+    {
+      "category": "budget_amendment",
+      "number": 3,
+      "path": "finance/2025/rozpoctova-opatreni/RO_2025_03.pdf"
+    },
+    {
+      "category": "budget_amendment",
+      "number": 4,
+      "path": "finance/2025/rozpoctova-opatreni/RO_2025_04.pdf"
+    },
+    {
+      "category": "budget_amendment",
+      "number": 5,
+      "path": "finance/2025/rozpoctova-opatreni/RO_2025_05.pdf"
+    },
+    {
+      "category": "budget_amendment",
+      "number": 6,
+      "path": "finance/2025/rozpoctova-opatreni/RO_2025_06.pdf"
+    },
+    {
+      "category": "budget_amendment",
+      "number": 7,
+      "path": "finance/2025/rozpoctova-opatreni/RO_2025_07.pdf"
+    },
+    {
+      "category": "budget_amendment",
+      "number": 8,
+      "path": "finance/2025/rozpoctova-opatreni/RO_2025_08.pdf"
+    },
+    {
+      "category": "budget_amendment",
+      "number": 9,
+      "path": "finance/2025/rozpoctova-opatreni/RO_2025_09.pdf"
+    },
+    {
+      "category": "budget_amendment",
+      "number": 10,
+      "path": "finance/2025/rozpoctova-opatreni/RO_2025_10.pdf"
+    },
+    {
+      "category": "budget_execution",
+      "path": "finance/2025/hospodareni/Fin_2-12_2025.pdf",
+      "original_name": "Fin 2_12_122025.pdf"
+    },
+    {
+      "category": "final_account",
+      "path": "finance/2025/hospodareni/Zaverecny_ucet_2025_schvaleny.pdf",
+      "original_name": "Závěrečný účet 2025 - schválený.pdf"
+    },
+    {
+      "category": "audit_review",
+      "path": "finance/2025/hospodareni/16_Zprava_Lomnice_nad_Popelkou_sig_audit.pdf"
+    },
+    {
+      "category": "inventory",
+      "path": "finance/2025/hospodareni/Inventarizacni_zprava_2025.pdf"
+    },
+    {
+      "category": "financial_statement",
+      "path": "finance/2025/ucetni-vykazy/Rozvaha_2025.pdf"
+    },
+    {
+      "category": "financial_statement",
+      "path": "finance/2025/ucetni-vykazy/Vykaz_zisku_a_ztraty_2025.pdf"
+    },
+    {
+      "category": "financial_statement",
+      "path": "finance/2025/ucetni-vykazy/Priloha_ucetni_zaverky_2025.pdf"
+    },
+    {
+      "category": "financial_statement",
+      "path": "finance/2025/ucetni-vykazy/Prehled_o_peneznich_tocich_2025.pdf"
+    },
+    {
+      "category": "financial_statement",
+      "path": "finance/2025/ucetni-vykazy/Prehled_o_zmenach_vlastniho_kapitalu_2025.pdf"
+    },
+    {
+      "category": "working_analysis_pdf",
+      "path": "finance/2025/analyzy/Financni_audit_Lomnice_nad_Popelkou_2025.pdf"
+    }
+  ],
+  "known_source_issues": [
+    "RO 2: souhrn příjmů nesouhlasí aritmeticky ani návazností.",
+    "RO 3: souhrn konečných příjmů nesouhlasí s aritmetikou; RO 4 přebírá hodnotu odpovídající aritmetickému součtu.",
+    "RO 7 a 8: souhrnný výdajový základ neodpovídá návaznosti mezi opatřeními.",
+    "RO 9: hlavička tabulky chybně uvádí RO 8.",
+    "Ověřit uvedené body proti exportu rozpočtu z účetního systému."
+  ],
+  "methodology": {
+    "missing_is_not_zero": true,
+    "approved_adjusted_actual_separate": true,
+    "contract_is_not_payment": true,
+    "financial_signal_is_not_proof": true
+  }
 }
