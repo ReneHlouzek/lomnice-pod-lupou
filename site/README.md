@@ -1,31 +1,44 @@
-# Web – první návrh
+# Web – informační portál Lomnice pod lupou
 
-## Aktuální stav
-- `index.html` obsahuje první responzivní návrh úvodní stránky v čistém HTML a CSS, bez externích knihoven.
-- Návrh má navigaci, úvodní blok, přehled oblastí, rozpočtové roky 2024–2026, metodiku a odkazy na zdrojový archiv.
-- Zatím nejde o plně datově napojenou aplikaci. Graf v úvodu je výslovně označen jako ilustrační a nesmí být zaměňován za skutečná čísla.
-- Připraven workflow `.github/workflows/pages.yml`, který po povolení GitHub Pages nasazuje obsah složky `site/`.
-- Veřejné nasazení ještě není potvrzeno. V nastavení repozitáře je potřeba vybrat **Settings → Pages → Build and deployment → Source: GitHub Actions**. Integrační nástroj dostupný v této relaci neumožňuje změnit nastavení Pages přímo.
+## Obrazovky a aktuální stav
 
-## Zapnutí veřejného webu
-1. Otevřít [nastavení GitHub Pages](https://github.com/ReneHlouzek/lomnice-pod-lupou/settings/pages).
-2. V části **Build and deployment** nastavit **Source** na **GitHub Actions**.
-3. Pokud GitHub nabídne potvrzení nebo výběr workflow, zvolit workflow **Deploy static site to GitHub Pages**.
-4. Otevřít kartu **Actions** a ověřit, že workflow doběhne úspěšně.
-5. Po úspěšném nasazení bude projektová stránka standardně dostupná na adrese [https://renehlouzek.github.io/lomnice-pod-lupou/](https://renehlouzek.github.io/lomnice-pod-lupou/). GitHub může potřebovat několik minut na první publikaci.
+- `index.html` – hlavní stránka s finančními ukazateli, navigací a metodikou.
+- `finance.html` – srovnání rozpočtových údajů 2024–2026 a kontrolní zjištění.
+- `dotace.html` – funkční dotační radar s filtrováním dvou otevřených výzev OPŽP ověřených 20. 10. 2026. Každá vede na oficiální stránku; vhodnost pro konkrétní projekt města je nutné ověřit.
+- `zakazky.html` – funkční vyhledávání a filtry nad datovým indexem projektu `ReneHlouzek/lomnice-verejne-zakazky`. Index poskytuje 163 projektových celků v čase jeho poslední synchronizace; počet se mění.
+- `investice.html` – vyhledávání projektů a dynamický detail s dostupnými událostmi, cenami, zdroji a potvrzenými smluvními vazbami.
+- `app.js` – sdílená logika datových obrazovek.
+- `assets/styles.css` – responzivní design pro desktop i mobil.
 
-## Zásady dalšího vývoje
-1. Každý graf musí mít srovnatelná data, popsané jednotky, období, definici ukazatele a odkaz na původní zdroj.
-2. Ke grafům doplnit přístupnou tabulkovou alternativu.
-3. Schválený rozpočet, rozpočet po změnách a skutečnost zobrazovat odděleně.
-4. U každého zjištění rozlišovat ověřený fakt, interpretaci a otevřenou otázku.
-5. Neprezentovat rozpočtovou nesrovnalost jako důkaz pochybení bez ověření primárním zdrojem.
-6. Otestovat zobrazení na mobilu, klávesnicí a se čtečkou obrazovky.
-7. Před veřejným spuštěním zkontrolovat všechny odkazy, popisky, kontrast a aktuálnost údajů.
+## Datové zdroje
 
-## Další doporučené kroky
-1. Dokončit první zapnutí Pages a ověřit výsledek v prohlížeči.
-2. Zkontrolovat návrh na mobilu i desktopu a upravit vizuální styl podle zpětné vazby.
-3. Přidat stránku s detailním rozpočtem 2024–2026 a přístupnou tabulkou.
-4. Vytvořit strojově čitelnou datovou vrstvu s metadaty a zdrojovými odkazy.
-5. Teprve po validaci dat napojit grafy a ukazatele.
+- Veřejný katalog zakázek a smluv: [lomnice-verejne-zakazky](https://github.com/ReneHlouzek/lomnice-verejne-zakazky).
+- Strojově čitelný index: `data/index.json` ve výše uvedeném repozitáři.
+- Detail projektu: `data/projects/<id>.json`.
+- Potvrzené vazby smluv a dodatků: `data/contract_links.json`.
+- Dotační radar vychází z oficiálních stránek OPŽP pro [105. výzvu](https://opzp.cz/dotace/105-vyzva/) a [109. výzvu](https://opzp.cz/dotace/109-vyzva/); stav je nutné před rozhodnutím znovu ověřit.
+
+Datový katalog zakázek se načítá za běhu z veřejného `raw.githubusercontent.com`. Pokud se zdroj nedá načíst, stránka má zobrazit chybové upozornění a ne falešná nulová data. Zdrojový index a detail se mohou aktualizovat nezávisle na tomto webu.
+
+## Důležitá metodická omezení
+
+1. Počet projektových celků není počet jednotlivých smluv, zakázek ani plateb.
+2. Smluvní cena není automaticky uhrazená částka; neznámá platba není nula.
+3. Cena s DPH a bez DPH se nesmí bez upozornění srovnávat.
+4. Vazba dodatku na základní smlouvu se zobrazuje jako potvrzená pouze tehdy, pokud ji podporuje důkaz v datovém katalogu.
+5. Otevřená dotační výzva není žádost, přiznaná dotace ani příjem peněz.
+6. Zmínka o možné dotační vhodnosti není potvrzením způsobilosti projektu.
+7. Plán, rozpočet po změnách a skutečné plnění jsou různé kategorie.
+8. Automatická klasifikace a upozornění jsou podněty k ověření, nikoli důkaz pochybení.
+
+## Nasazení
+
+Web se nasazuje pomocí `.github/workflows/pages.yml` ze složky `site/`. Workflow se spouští po změně souborů `site/**` na větvi `main` a lze jej spustit také ručně. Stav nasazení je dostupný v kartě Actions.
+
+## Další práce
+
+1. Otestovat živé načítání dat a zobrazení všech tří obrazovek na desktopu i mobilu.
+2. Rozšířit dotační radar o další oficiální programy a jasně evidovat datum poslední kontroly.
+3. Propojit zakázky a investice s rozpočtovými položkami, usneseními, dotačními rozhodnutími a skutečnými úhradami.
+4. Přidat přístupné tabulkové alternativy a ověřit ovládání klávesnicí.
+5. Automaticky testovat odkazy, strukturu JSON a chyby načítání.
