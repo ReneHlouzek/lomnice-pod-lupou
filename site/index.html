@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Lomnice pod lupou – veřejně dohledatelný přehled rozpočtu, financí, investic a veřejných zakázek města Lomnice nad Popelkou.">
+  <meta name="description" content="Lomnice pod lupou – srozumitelný přehled rozpočtu, hospodaření, investic a veřejných zakázek města Lomnice nad Popelkou.">
   <meta name="theme-color" content="#102c3a">
   <title>Lomnice pod lupou | Veřejné finance srozumitelně</title>
   <style>
@@ -26,75 +26,78 @@
     .callout{background:var(--navy);color:white;border-radius:20px;padding:32px;display:flex;justify-content:space-between;align-items:center;gap:28px}.callout h2{font-size:1.8rem;letter-spacing:-.045em;margin:0 0 8px}.callout p{color:#c6d6d8;margin:0;max-width:650px}.callout .btn{white-space:nowrap}
     .method{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px}.step{border-top:2px solid var(--teal);padding-top:14px}.step strong{display:block;font-size:.95rem;margin-bottom:7px}.step p{font-size:.86rem;color:var(--muted);margin:0}
     footer{background:#0c222d;color:#d0dedd;padding:38px 0}.footergrid{display:flex;justify-content:space-between;gap:30px;align-items:start}.footerbrand{font-weight:850;color:white;font-size:1.05rem}.footertext{max-width:550px;font-size:.82rem;color:#aabdc0;margin-top:9px}.footlinks{display:flex;gap:18px;flex-wrap:wrap}.footlinks a{font-size:.83rem;color:#d0dedd;text-decoration:none}.footlinks a:hover{color:var(--lime)}.fineprint{font-size:.75rem;color:#8da4a8;margin-top:25px;border-top:1px solid #29414a;padding-top:18px}
-    @media(max-width:850px){nav{gap:13px}nav a:not(.navcta){display:none}.hero-grid{grid-template-columns:1fr;gap:40px;padding:60px 0}.visual{max-width:540px}.feature-grid{grid-template-columns:1fr;gap:30px}.cards{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.method{grid-template-columns:repeat(2,1fr)}}
+    .numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.numbercard{background:#fff;border:1px solid var(--line);border-radius:15px;padding:23px}.numbercard .big{font-size:clamp(1.45rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-.05em;line-height:1.15;margin:8px 0}.numbercard p{font-size:.86rem;color:var(--muted);margin:0}.tag{display:inline-block;border-radius:999px;padding:5px 9px;background:#e7f2eb;color:#28664a;font-size:.72rem;font-weight:800}.tag.warn{background:#fff0cf;color:#7c5913}.tablewrap{overflow-x:auto;background:white;border:1px solid var(--line);border-radius:14px}table{width:100%;border-collapse:collapse;min-width:680px}th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);font-size:.91rem}th{background:#eaf1ee;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}tr:last-child td{border-bottom:0}.num{text-align:right;font-variant-numeric:tabular-nums}.note{border-left:4px solid var(--teal);padding:15px 18px;background:#eaf1ee;border-radius:0 10px 10px 0;color:#40545c;font-size:.92rem}.alerts{display:grid;gap:12px}.alert{background:white;border:1px solid var(--line);border-radius:13px;padding:18px 20px}.alert strong{display:block;margin-bottom:5px}.alert p{color:var(--muted);font-size:.9rem;margin:0}.source{font-size:.82rem;color:var(--teal);font-weight:750;text-decoration:none}.source:hover{text-decoration:underline}.small{font-size:.82rem;color:var(--muted)}\n    @media(max-width:850px){{nav{gap:13px}nav a:not(.navcta){display:none}.hero-grid{grid-template-columns:1fr;gap:40px;padding:60px 0}.visual{max-width:540px}.feature-grid{grid-template-columns:1fr;gap:30px}.cards{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.method{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.topline .wrap{font-size:.72rem}.topline span:last-child{display:none}.nav{padding:13px 0}.navcta{padding:9px 11px;font-size:.82rem}.hero-grid{padding:48px 0}.hero p{font-size:1rem}h1{font-size:3.1rem}.stats{grid-template-columns:1fr;gap:0}.stat,.stat:first-child,.stat:last-child{border-radius:0;border-top:1px solid var(--line)}.stat:first-child{border-radius:13px 13px 0 0}.stat:last-child{border-radius:0 0 13px 13px}.cards{grid-template-columns:1fr}section{padding:55px 0}.year{grid-template-columns:55px 1fr;gap:12px}.year .pill{grid-column:2;justify-self:start}.callout{padding:25px;align-items:start;flex-direction:column}.method{grid-template-columns:1fr 1fr}.footergrid{flex-direction:column}.visual{padding:19px}.chart{gap:8px}}
   </style>
 </head>
 <body>
   <div class="topline"><div class="wrap"><span>VEŘEJNÁ DATA · MÍSTNÍ ROZPOČET · OTEVŘENÉ PODKLADY</span><span>Lomnice nad Popelkou</span></div></div>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="#uvod" aria-label="Lomnice pod lupou – úvod"><span class="brandmark">L</span><span>Lomnice pod lupou</span></a>
-      <nav aria-label="Hlavní navigace"><a href="#prehled">Přehled</a><a href="#roky">Rozpočty po letech</a><a href="#metodika">Jak pracujeme</a><a class="navcta" href="#zdroje">Prohlédnout podklady ↗</a></nav>
-    </div>
-  </header>
+  <header><div class="wrap nav">
+    <a class="brand" href="#uvod" aria-label="Lomnice pod lupou – úvod"><span class="brandmark">L</span><span>Lomnice pod lupou</span></a>
+    <nav aria-label="Hlavní navigace"><a href="#finance">Finance</a><a href="#zjisteni">Co jsme zjistili</a><a href="#metodika">Metodika</a><a class="navcta" href="finance.html">Podrobný přehled ↗</a></nav>
+  </div></header>
   <main>
-    <section class="hero" id="uvod">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Město černé na bílém</div>
-          <h1>Veřejné peníze.<br><em>Jasný přehled.</em></h1>
-          <p>Rozpočet, investice a smlouvy Lomnice nad Popelkou bez složité úředničtiny. Založeno na dokumentech, číslech a ověřitelných zdrojích.</p>
-          <div class="actions"><a class="btn primary" href="#prehled">Prozkoumat přehled ↓</a><a class="btn ghost" href="https://github.com/ReneHlouzek/lomnice-pod-lupou">Zdrojový archiv na GitHubu ↗</a></div>
-        </div>
-        <div class="visual" aria-label="Ilustrační graf vývoje rozpočtu">
-          <div class="visual-top"><span>Rozpočet pod lupou</span><span class="live">Živý projekt</span></div>
-          <div class="chart" aria-hidden="true"><div class="bar" style="height:40%"><span>24</span></div><div class="bar" style="height:54%"><span>25</span></div><div class="bar" style="height:76%"><span>26</span></div><div class="bar" style="height:63%"><span>27</span></div><div class="bar" style="height:90%"><span>28</span></div><div class="bar" style="height:68%"><span>29</span></div></div>
-          <div class="visual-note"><strong>Čísla s kontextem.</strong> Graf je zatím pouze ilustrační, nevyjadřuje skutečné hodnoty. Každý publikovaný ukazatel musí mít zdroj.</div>
-        </div>
+    <section class="hero" id="uvod"><div class="wrap hero-grid">
+      <div><div class="eyebrow">Město černé na bílém</div><h1>Veřejné peníze.<br><em>Jasný přehled.</em></h1>
+        <p>Kolik město vybere, za co utrácí, jak se mění rozpočet a co stojí za další otázku? Přehled stavíme na dokumentech, přepočtených číslech a srozumitelném vysvětlení — ne jen na hromadě odkazů.</p>
+        <div class="actions"><a class="btn primary" href="#finance">Prohlédnout čísla ↓</a><a class="btn ghost" href="finance.html">Detailní finanční přehled ↗</a></div>
       </div>
-    </section>
-    <div class="wrap stats" aria-label="Aktuální stav dat">
-      <div class="stat"><div class="stat-label">Poslední uzavřený rok v analýze</div><div class="stat-value">2025</div><div class="stat-note">Závěrečný účet a hlavní výkazy jsou k dispozici</div></div>
-      <div class="stat"><div class="stat-label">Aktuálně sledovaný rozpočet</div><div class="stat-value">2026</div><div class="stat-note">Průběžná kontrola; rok ještě není uzavřen</div></div>
-      <div class="stat"><div class="stat-label">Rozpočtová opatření 2026</div><div class="stat-value">1–3</div><div class="stat-note">Zatím evidována tři zveřejněná opatření</div></div>
-    </div>
-    <section id="prehled">
-      <div class="wrap">
-        <div class="section-head"><div><div class="kicker">Co tu najdete</div><h2>Veřejné finance, kterým jde rozumět.</h2></div><p>Nejde jen o číslo v tabulce. Důležité je, co znamená, odkud pochází a co z něj lze — nebo nelze — vyvodit.</p></div>
-        <div class="cards">
-          <article class="card"><div class="icon">↗</div><h3>Rozpočty a hospodaření</h3><p>Schválený rozpočet, změny během roku a skutečné plnění. Tři různé věci, které musí zůstat oddělené.</p><a class="textlink" href="https://github.com/ReneHlouzek/lomnice-pod-lupou/tree/main/finance">Prohlédnout finanční podklady ↗</a></article>
-          <article class="card"><div class="icon">⌂</div><h3>Investice města</h3><p>Prostor pro sledování plánovaných akcí, jejich rozpočtů, termínů, smluv, dodatků a skutečně uhrazených částek.</p><a class="textlink" href="https://github.com/ReneHlouzek/lomnice-pod-lupou">Zatím ve vývoji ↗</a></article>
-          <article class="card"><div class="icon">§</div><h3>Smlouvy a zakázky</h3><p>Podklady k veřejným zakázkám a smlouvám s cílem spojit cenu, dodatky, dodavatele a platby do srozumitelného přehledu.</p><a class="textlink" href="https://github.com/ReneHlouzek">Zdrojový profil projektu ↗</a></article>
-          <article class="card"><div class="icon">◎</div><h3>Dotace a financování</h3><p>Rozlišujeme plánovanou dotaci, podanou žádost, přiznanou podporu a skutečně přijaté peníze.</p><span class="textlink">Datová část se připravuje</span></article>
-          <article class="card"><div class="icon">✓</div><h3>Kontrolní upozornění</h3><p>Návaznosti rozpočtových opatření, aritmetické rozdíly a neúplné údaje. Každý signál vyžaduje ověření.</p><a class="textlink" href="https://github.com/ReneHlouzek/lomnice-pod-lupou/tree/main/finance/2026/analyzy">Ukázka kontroly roku 2026 ↗</a></article>
-          <article class="card"><div class="icon">⌕</div><h3>Dokumenty a zdroje</h3><p>Originální PDF a průběžné analýzy na jednom místě. U každého důležitého závěru musí být dohledatelná cesta ke zdroji.</p><a class="textlink" href="https://github.com/ReneHlouzek/lomnice-pod-lupou">Otevřít archiv ↗</a></article>
+      <div class="visual"><div class="visual-top"><span>Hospodaření 2025</span><span class="live">Uzavřený rok</span></div>
+        <div style="display:grid;gap:17px;margin:25px 0">
+          <div><div style="display:flex;justify-content:space-between;gap:10px;font-size:.85rem"><span>Skutečné příjmy</span><strong>187,65 mil. Kč</strong></div><div style="height:10px;background:#34525d;border-radius:99px;margin-top:7px"><div style="height:100%;width:98.5%;background:#a8c6a0;border-radius:99px"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;gap:10px;font-size:.85rem"><span>Skutečné výdaje</span><strong>190,48 mil. Kč</strong></div><div style="height:10px;background:#34525d;border-radius:99px;margin-top:7px"><div style="height:100%;width:100%;background:#d6e86b;border-radius:99px"></div></div></div>
         </div>
+        <div class="visual-note"><strong>Výsledek: −2,83 mil. Kč.</strong> Skutečné příjmy a výdaje po konsolidaci podle výkazu FIN 2-12 M. Nejde o účetní zisk ani o změnu zůstatku na účtech.</div>
       </div>
-    </section>
-    <section class="feature" id="roky">
-      <div class="wrap feature-grid">
-        <div><div class="kicker">Rozpočty po letech</div><h2>Nejdřív data.<br>Potom závěry.</h2><p class="feature-intro">Přehled se rozšiřuje postupně. U každého roku uvádíme, jaké dokumenty máme, co jsme ověřili a co ještě chybí. Nedostupný údaj nevydáváme za nulu.</p><p><a class="textlink" href="https://github.com/ReneHlouzek/lomnice-pod-lupou">Všechny podklady v repozitáři ↗</a></p></div>
-        <div class="yearlist">
-          <article class="year"><div class="yearnum">2024</div><div><h3>Srovnávací základna</h3><p>Finanční analýza, rozpočtová opatření a rekonstrukce vybraných údajů.</p></div><span class="pill">Analyzováno</span></article>
-          <article class="year"><div class="yearnum">2025</div><div><h3>Uzavřené hospodaření</h3><p>FIN 2-12 M, závěrečný účet, účetní výkazy a kontrola návaznosti opatření.</p></div><span class="pill">Pracovní analýza</span></article>
-          <article class="year"><div class="yearnum">2026</div><div><h3>Průběžný rozpočet</h3><p>Schválený rozpočet, RO č. 1–3 a střednědobý výhled. Skutečné plnění zatím není doloženo.</p></div><span class="pill work">Otevřený rok</span></article>
-        </div>
+    </div></section>
+    <section style="padding:24px 0 10px"><div class="wrap numbers">
+      <article class="numbercard"><div class="kicker">Skutečnost 2025</div><div class="big">−2,83 mil. Kč</div><p>Rozdíl skutečných příjmů a výdajů po konsolidaci.</p></article>
+      <article class="numbercard"><div class="kicker">Dlouhodobý dluh 2025</div><div class="big">17,14 mil. Kč</div><p>Úvěrové jistiny a další vykázaný dlouhodobý závazek.</p></article>
+      <article class="numbercard"><div class="kicker">Plánovaný deficit 2026</div><div class="big">−93,98 mil. Kč</div><p>Rozpočet po třetím opatření; plán, nikoli skutečný výsledek.</p></article>
+    </div></section>
+    <section id="finance"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">Čísla v souvislostech</div><h2>Co říkají dostupné rozpočtové dokumenty</h2></div><p>Částky jsou zaokrouhlené na tisíce či setiny milionu korun. U každého roku odlišujeme skutečné plnění od rozpočtového plánu.</p></div>
+      <div class="tablewrap"><table><thead><tr><th>Ukazatel</th><th class="num">2024 skutečnost</th><th class="num">2025 skutečnost</th><th class="num">2026 plán po RO 3</th></tr></thead><tbody>
+        <tr><td>Příjmy po konsolidaci</td><td class="num">180,650 mil. Kč</td><td class="num">187,645 mil. Kč</td><td class="num">199,191 mil. Kč</td></tr>
+        <tr><td>Výdaje po konsolidaci</td><td class="num">163,224 mil. Kč</td><td class="num">190,475 mil. Kč</td><td class="num">293,170 mil. Kč</td></tr>
+        <tr><td>Saldo</td><td class="num">+17,427 mil. Kč</td><td class="num">−2,829 mil. Kč</td><td class="num">−93,979 mil. Kč</td></tr>
+        <tr><td>Stav bankovních účtů ke konci roku</td><td class="num">56,907 mil. Kč</td><td class="num">43,079 mil. Kč</td><td class="num">—</td></tr>
+      </tbody></table></div>
+      <p class="small">Zdroje: výkaz FIN 2-12 M, závěrečné účty a rozpočtová opatření uložená v archivu projektu. Pomlčka znamená, že uzavřená roční skutečnost za rok 2026 zatím není k dispozici.</p>
+      <div class="actions" style="margin-top:20px"><a class="btn primary" href="finance.html">Otevřít podrobnou analýzu ↗</a><a class="btn" style="border:1px solid var(--line);background:#fff" href="https://github.com/ReneHlouzek/lomnice-pod-lupou/tree/main/finance">Zdrojové dokumenty ↗</a></div>
+    </div></section>
+    <section class="feature" id="zjisteni"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">Zjištění a otázky</div><h2>Co si zaslouží pozornost</h2></div><p>Nejde o seznam obvinění. Jsou to ověřené údaje a konkrétní body, u kterých je potřeba znát širší kontext nebo získat další dokument.</p></div>
+      <div class="alerts">
+        <article class="alert"><strong>2026: velký plánovaný deficit</strong><p>Rozpočet po RO č. 3 počítá s deficitem 93,979 mil. Kč. Jeho financování pracuje s prostředky z minulých let, úvěrovým rámcem a splátkami. Důležité bude sledovat skutečné čerpání investic, úvěru a zůstatky na účtech. Samotný plán není důkazem, že město takový deficit skutečně vykáže.</p></article>
+        <article class="alert"><strong>2026: nesoulad v souhrnu rozpočtového opatření č. 1</strong><p>Součet příjmů v dokumentu RO 1 nesedí s aritmetikou; následující RO 2 však navazuje na správně přepočtenou hodnotu. Zatím jde o nesoulad ve zveřejněném dokumentu, který je vhodné ověřit exportem z rozpočtového systému.</p></article>
+        <article class="alert"><strong>2025: skutečnost byla výrazně lepší než upravený plán salda</strong><p>Upravený rozpočet po konsolidaci plánoval saldo −45,807 mil. Kč, skutečnost skončila na −2,829 mil. Kč. Rozdíl 42,978 mil. Kč není automaticky „úspora“: je třeba rozlišit nerealizované akce, časové posuny, změny financování a skutečné úspory.</p></article>
+        <article class="alert"><strong>2024: rozdíl mezi agregáty dvou dokumentů</strong><p>Výdaje v závěrečném účtu se liší od přepočtu podle FIN 2-12 M přibližně o 416 tis. Kč. Bez vysvětlení rozsahu a metodiky nelze rozhodnout, zda jde o rozdílnou definici, prezentaci, nebo chybu.</p></article>
       </div>
-    </section>
-    <section id="metodika">
-      <div class="wrap">
-        <div class="section-head"><div><div class="kicker">Naše pravidla</div><h2>Transparentnost není dojem. Je to postup.</h2></div><p>Projekt je nezávislý pracovní přehled veřejných dokumentů. Není účetnictvím města ani zákonným auditem.</p></div>
-        <div class="method">
-          <div class="step"><strong>01 / Primární zdroje</strong><p>Vyhledáváme originální dokumenty a u tvrzení uvádíme dohledatelný zdroj.</p></div>
-          <div class="step"><strong>02 / Srovnatelná čísla</strong><p>Rozpočet, upravený rozpočet a skutečnost nepovažujeme za zaměnitelné ukazatele.</p></div>
-          <div class="step"><strong>03 / Ověřit, neobviňovat</strong><p>Rozdíl v tabulce je důvod ke kontrole, nikoli sám o sobě důkaz chyby nebo pochybení.</p></div>
-          <div class="step"><strong>04 / Přiznat limity</strong><p>Uvádíme, co víme, co nevíme a jaké podklady je potřeba ještě získat.</p></div>
-        </div>
-        <div class="callout" id="zdroje" style="margin-top:42px"><div><h2>Chcete jít přímo ke zdrojům?</h2><p>V repozitáři najdete původní dokumenty, inventáře, metodické poznámky i průběžné analýzy. Web je první návrh rozhraní — datové přehledy se budou doplňovat až po ověření.</p></div><a class="btn primary" href="https://github.com/ReneHlouzek/lomnice-pod-lupou">Otevřít GitHub ↗</a></div>
+      <p style="margin-top:22px"><a class="textlink" href="finance.html#otevrene-otazky">Všechna zjištění, omezení a otevřené otázky ↗</a></p>
+    </div></section>
+    <section><div class="wrap">
+      <div class="section-head"><div><div class="kicker">Co projekt pokrývá</div><h2>Od rozpočtu až ke konkrétní smlouvě</h2></div><p>Finanční analýza je první datově zpracovaná část. Ostatní oblasti mají být propojené tak, aby se dalo přejít od záměru přes zakázku až k úhradě.</p></div>
+      <div class="cards">
+        <article class="card"><div class="icon">↗</div><h3>Rozpočty a hospodaření</h3><p>Schválený rozpočet, změny během roku, skutečné plnění, dluh a peněžní zůstatky — s jasným označením období a typu údaje.</p><a class="textlink" href="finance.html">Finanční přehled ↗</a></article>
+        <article class="card"><div class="icon">⌂</div><h3>Investice města</h3><p>Sledování plánovaných akcí, rozpočtů, termínů, zdrojů financování, dodatků a skutečně uhrazených částek.</p><span class="tag warn">Další datová etapa</span></article>
+        <article class="card"><div class="icon">§</div><h3>Smlouvy a zakázky</h3><p>Propojení zadávacího řízení, základní smlouvy, dodatků, dodavatele a dostupných platebních údajů.</p><a class="textlink" href="https://github.com/ReneHlouzek/lomnice-pod-lupou">Stav zdrojového archivu ↗</a></article>
+        <article class="card"><div class="icon">◎</div><h3>Dotace a financování</h3><p>Rozlišujeme plánovanou dotaci, podanou žádost, přiznanou podporu a skutečně přijaté peníze.</p><span class="tag warn">Další datová etapa</span></article>
+        <article class="card"><div class="icon">✓</div><h3>Kontrolní upozornění</h3><p>Kontroly návaznosti rozpočtových opatření, aritmetiky a úplnosti. Upozornění je podnět k ověření, ne automatický závěr.</p><a class="textlink" href="https://github.com/ReneHlouzek/lomnice-pod-lupou/tree/main/finance/2026/analyzy">Kontrola roku 2026 ↗</a></article>
+        <article class="card"><div class="icon">⌕</div><h3>Veřejné podklady</h3><p>Originální dokumenty, inventáře, metodika a podrobné analýzy zůstávají dohledatelné pro každého, kdo chce ověřit výpočet.</p><a class="textlink" href="https://github.com/ReneHlouzek/lomnice-pod-lupou">Otevřít archiv ↗</a></article>
       </div>
-    </section>
+    </div></section>
+    <section class="feature" id="metodika"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">Naše pravidla</div><h2>Transparentnost není dojem. Je to postup.</h2></div><p>Projekt je nezávislý pracovní přehled veřejných dokumentů. Není účetnictvím města ani zákonným auditem.</p></div>
+      <div class="method">
+        <div class="step"><strong>01 / Primární zdroje</strong><p>U důležitých závěrů uvádíme dokument, období a dohledatelnou cestu k původu údajů.</p></div>
+        <div class="step"><strong>02 / Srovnatelná čísla</strong><p>Schválený rozpočet, rozpočet po změnách a skutečnost nejsou zaměnitelné.</p></div>
+        <div class="step"><strong>03 / Ověřit, neobviňovat</strong><p>Rozdíl v tabulce je důvod ke kontrole, nikoli sám o sobě důkaz pochybení.</p></div>
+        <div class="step"><strong>04 / Přiznat limity</strong><p>Uvádíme, co víme, co nevíme a jaké podklady je potřeba ještě získat.</p></div>
+      </div>
+      <div class="callout" style="margin-top:42px"><div><h2>Chcete znát detail i původ čísel?</h2><p>Podrobná stránka shrnuje hospodaření za roky 2024–2025, plán roku 2026, hlavní kontrolní body a přímé odkazy na podkladové analýzy.</p></div><a class="btn primary" href="finance.html">Přejít na finance ↗</a></div>
+    </div></section>
   </main>
-  <footer><div class="wrap"><div class="footergrid"><div><div class="footerbrand">Lomnice pod lupou</div><div class="footertext">Srozumitelný přehled veřejných financí, investic a smluv města Lomnice nad Popelkou. Projekt pracuje s veřejnými zdroji a jeho závěry se průběžně ověřují.</div></div><div class="footlinks"><a href="https://github.com/ReneHlouzek/lomnice-pod-lupou">GitHub</a><a href="#metodika">Metodika</a><a href="#roky">Přehled let</a></div></div><div class="fineprint">První návrh webu · Stav obsahu: 20. 10. 2026 · Ilustrační graf v úvodním bloku není skutečná datová vizualizace.</div></div></footer>
+  <footer><div class="wrap"><div class="footergrid"><div><div class="footerbrand">Lomnice pod lupou</div><div class="footertext">Srozumitelný přehled veřejných financí, investic a smluv města Lomnice nad Popelkou. Závěry jsou průběžně ověřovány proti dostupným veřejným dokumentům.</div></div><div class="footlinks"><a href="finance.html">Finance</a><a href="#metodika">Metodika</a><a href="https://github.com/ReneHlouzek/lomnice-pod-lupou">GitHub</a></div></div><div class="fineprint">Aktualizováno 20. 10. 2026 · Rozpočtové hodnoty roku 2026 jsou plán, nikoli skutečné plnění.</div></div></footer>
 </body>
 </html>
