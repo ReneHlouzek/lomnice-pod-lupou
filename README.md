@@ -23,7 +23,7 @@ Veřejně dohledatelný a zdrojově doložený přehled financí, investic, dota
 ## Aktuální stav finančních podkladů
 - Rok 2024: do repozitáře byla zařazena sada 21 PDF.
 - Rozpočtová opatření č. 1–8 za rok 2024 jsou identifikována; soubor `Z.pdf` obsahově odpovídá RO č. 3.
-- Kontrola finanční analýzy vůči primárním dokumentům probíhá. Otevřené body jsou uvedeny v `finance/2024/analyzy/STAV_KONTROLY_2024.md`.
+- Kontrola finanční analýzy vůči primárním dokumentům probíhá. Stav je v `finance/2024/analyzy/STAV_KONTROLY_2024.md` a ověřené hodnoty v `finance/2024/analyzy/KONTROLA_KLICOVYCH_UDAJU_2024.md`.
 - Opravený inventář 21 PDF je v `finance/2024/metadata/INVENTAR_2024_OPRAVENY.md`. Původní inventář `INVENTAR_PRVNI_DAVKY.md` zachovává historický záznam první kontroly.
 - Analytické dokumenty jsou pracovní výstupy a nenahrazují oficiální účetní výkazy ani přezkoumání hospodaření.
 - Další rok bude zpracován po uzavření a zdokumentování sady 2024.
